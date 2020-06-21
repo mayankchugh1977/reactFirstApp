@@ -23,7 +23,8 @@ const Header = function(props){
 //     render(){
 //         return (
 //             <div className="header">
-//                 Phone Directory
+//                  <h1>{props.name}</h1>
+//                  <h3>{props.tagline}</h3>
 //             </div>
 //         )
 //     }
