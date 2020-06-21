@@ -23,8 +23,8 @@ const Header = function(props){
 //     render(){
 //         return (
 //             <div className="header">
-//                  <h1>{props.name}</h1>
-//                  <h3>{props.tagline}</h3>
+//                  <h1>{this.props.name}</h1>
+//                  <h3>{this.props.tagline}</h3>
 //             </div>
 //         )
 //     }
