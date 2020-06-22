@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+// import ReactDOM from 'reactDOM';
 import Header from './Header';
+import CustomText from './CustomText';
 import './App.css';
 
 const buttonStyle = {
@@ -23,9 +25,24 @@ var imageStyle = {
   borderRadius: '50%' // Line 4
 };
 
+// ReactDOM.render(
+//   <div>
+//      <CustomText text="UpGrad"/>
+//   </div> ,
+//   document.getElementById("root")
+// );
+
 // React.createElement('div', {className: "main-container"}, "h1", "UpGrad", "p", "Building Careers of Tomorrow!");
 
 class App extends Component {
+
+  deletehandler(){
+    alert("delete clikced");
+  }
+
+  clickHandler(message){
+    alert(message);
+  }
 
   render() {
 
@@ -44,6 +61,7 @@ class App extends Component {
         return (
           <div>
               <Header name="Mayank Chugh" tagline="My Tag"/>
+              <CustomText text="UpGrad"/>
               <div className="component-body-container">
                   <button className="custom-btn add-btn">Add</button>
                   <div className="grid-container heading-container">
@@ -56,7 +74,7 @@ class App extends Component {
                               <span className="grid-item">{sub.name}</span>
                               <span className="grid-item">{sub.phone}</span>
                               <span className="grid-item">
-                                <button className="custom-btn delete-btn">Delete</button>
+                                <button className="custom-btn delete-btn" onClick={this.clickHandler.bind(this, "Delete Handler Clicked")}>Delete</button>
                               </span>
                           </div>
 
