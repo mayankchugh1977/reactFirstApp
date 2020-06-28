@@ -12,7 +12,8 @@ const headerStyle = {
 const Header = function(props){
     return (
         // <div style={headerStyle}>
-        <div className="header">
+        <div className="header">        
+            <h1>{props.heading}</h1>
             <h1>{props.name}</h1>
 	        <h3>{props.tagline}</h3>
         </div>

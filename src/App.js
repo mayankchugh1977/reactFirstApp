@@ -36,8 +36,16 @@ var imageStyle = {
 
 class App extends Component {
 
+  constructor()
+  {
+    super();
+    this.state = {
+      subscribersListToShow: []
+    }
+  }
+
   deletehandler(){
-    alert("delete clikced");
+    alert("delete clicked");
   }
 
   clickHandler(message){
@@ -46,18 +54,18 @@ class App extends Component {
 
   render() {
 
-    let subscribers = [
-      {
-        id: 1,
-        name: "Shilpa Bhat",
-        phone: "9999999999"
-      },
-      {
-          id: 2,
-          name: "Srishti Gupta",
-          phone: "8888888888"
-      }
-    ];
+    // let subscribers = [
+    //   {
+    //     id: 1,
+    //     name: "Shilpa Bhat",
+    //     phone: "9999999999"
+    //   },
+    //   {
+    //       id: 2,
+    //       name: "Srishti Gupta",
+    //       phone: "8888888888"
+    //   }
+    // ];
         return (
           <div>
               <Header name="Mayank Chugh" tagline="My Tag"/>
@@ -69,7 +77,7 @@ class App extends Component {
                     <span className="grid-item phone-heading">Phone</span>
                   </div>
                   {
-                    subscribers.map(sub => {
+                    this.state.subscribersListToShow.map(sub => {
                       return <div key={sub.id} className="grid-container heading-container">
                               <span className="grid-item">{sub.name}</span>
                               <span className="grid-item">{sub.phone}</span>
