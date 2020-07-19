@@ -8,16 +8,15 @@ import * as serviceWorker from './serviceWorker';
 import './common/common.css';
 import PhoneDirectory from './PhoneDirectory';
 
-ReactDOM.render(<PhoneDirectory />, document.getElementById('root'));
-// ReactDOM.render(
-//  {/* <React.StrictMode> */}
-//    <PhoneDirectory/>
-//    {/* <ShowSubuscribers/> */}
-//    {/* <AddSubscriber/> */}
-//      
-//  {/* </React.StrictMode> */},
-//  document.getElementById('root')
-//);
+ReactDOM.render(
+  {/* <React.StrictMode> */}
+    <PhoneDirectory/>
+    {/* <ShowSubuscribers/> */}
+    {/* <AddSubscriber/> */}
+      
+  {/* </React.StrictMode> */},
+  document.getElementById('root')
+);
 registerServiceWorker();
 
 // If you want your app to work offline and load faster, you can change
